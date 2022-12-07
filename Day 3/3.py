@@ -23,6 +23,30 @@ def main():
 					priorityTotal = priorityTotal + (ord(j) - 38)
 					break
 		line = file.readline()
+	
+	file.close()
+	print(priorityTotal)
+
+	#part 2
+	priorityTotal = 0
+	file = open("./input.txt", "r")
+	line1 = file.readline()
+	line2 = file.readline()
+	line3 = file.readline()
+	while line1 and line2 and line3:
+		for j in line1:
+			if j in line2 and j in line3:
+				if j.islower():
+					# 1-26 for a-z
+					priorityTotal = priorityTotal + (ord(j) - 96)
+					break
+				else:
+					# 64-26=38 to give 27-52 for A-Z
+					priorityTotal = priorityTotal + (ord(j) - 38)
+					break
+		line1 = file.readline()
+		line2 = file.readline()
+		line3 = file.readline()
 
 	print(priorityTotal)
 	file.close()
