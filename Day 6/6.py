@@ -30,8 +30,9 @@ def main():
 	#part 1
 	print('Part 1:')
 	markerFinder(4)	
-	print('Part 2:')
+	
 	#part 2:
+	print('Part 2:')
 	markerFinder(14)
 
 
