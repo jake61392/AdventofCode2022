@@ -23,7 +23,8 @@ def moveTail(head: list[int], tail: list[int]):
 		delta = [x - y for x, y in zip(head, tail)]
 
 		if abs(delta[0]) > 1 or abs(delta[1]) > 1:
-			tail[:] = [n + (1 if deltaN >= 1 else -1 if deltaN <= -1 else 0) for n, deltaN in zip(tail, delta)]
+			tail[:] = [n + (1 if deltaN >= 1 else -1 if deltaN <= -1 else 0) \
+			                for n, deltaN in zip(tail, delta)]
 
 
 ######################################################
